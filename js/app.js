@@ -2,6 +2,7 @@
 const API_KEY = "3b097d102fe5a452215aa6839083a322"; //
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
+
 // 💾 LocalStorage
 const FAVORITES_KEY = "weatherflow-favorites";
 
