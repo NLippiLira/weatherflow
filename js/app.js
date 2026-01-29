@@ -1,9 +1,7 @@
 // ===============================
-// WeatherFlow - app.js FINAL
-// ===============================
 
 // 🔑 CONFIGURACIÓN API
-const API_KEY = "TU_API_KEY_AQUI"; // <-- reemplaza con tu API key
+const API_KEY = "3b097d102fe5a452215aa6839083a322"; //
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 // 💾 LocalStorage
