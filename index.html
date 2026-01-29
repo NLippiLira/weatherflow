@@ -2,49 +2,97 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>WeatherFlow</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeatherFlow | Consulta del clima</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WeatherFlow - App web para consultar el clima en tiempo real y guardar ciudades favoritas." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="bg-light">
 
-  <nav class="navbar navbar-dark bg-dark fixed-top">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
-      <span class="navbar-brand">🌤️ WeatherFlow</span>
+      <span class="navbar-brand fw-bold">
+        🌤️ WeatherFlow
+      </span>
     </div>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main class="container pt-5 mt-5">
 
+    <!-- HERO -->
     <section class="text-center mb-5">
       <h1 class="fw-bold">Consulta el clima en tiempo real</h1>
-      <p class="text-muted">Busca cualquier ciudad y guarda tus favoritas</p>
+      <p class="text-muted">
+        Busca cualquier ciudad y guarda tus favoritas para revisarlas fácilmente
+      </p>
     </section>
 
+    <!-- SEARCH -->
     <section class="card shadow-sm p-4 mb-4">
       <div class="input-group">
-        <input id="cityInput" class="form-control" placeholder="Ej: Santiago" />
-        <button id="searchBtn" class="btn btn-primary">
-          Buscar
+        <input
+          id="cityInput"
+          type="text"
+          class="form-control"
+          placeholder="Ej: Santiago"
+          aria-label="Nombre de la ciudad"
+        />
+        <button
+          id="searchBtn"
+          class="btn btn-primary"
+          aria-label="Buscar clima"
+        >
+          <i class="bi bi-search"></i> Buscar
         </button>
       </div>
     </section>
 
-    <section id="weatherResult" class="text-center d-none">
-      <!-- Resultado clima -->
+    <!-- WEATHER RESULT -->
+    <section
+      id="weatherResult"
+      class="text-center d-none mb-4"
+      aria-live="polite"
+    >
+      <!-- El resultado del clima se renderiza desde JS -->
     </section>
 
+    <!-- FAVORITES -->
     <section class="mt-4">
-      <h5>⭐ Ciudades favoritas</h5>
-      <ul id="favoritesList" class="list-group"></ul>
+      <h5 class="mb-3">⭐ Ciudades favoritas</h5>
+      <ul
+        id="favoritesList"
+        class="list-group"
+        aria-label="Lista de ciudades favoritas"
+      >
+        <!-- Favoritos renderizados desde JS -->
+      </ul>
     </section>
 
   </main>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- App JS -->
   <script type="module" src="js/app.js"></script>
+
 </body>
 </html>
